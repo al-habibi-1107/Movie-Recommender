@@ -1,6 +1,12 @@
-# Movie-Recommender
-A Basic Movie Recommendation System
+# MOVIE-RECOMMENDER
+## OVERVIEW:
+This is a Basic Movie Recommendation system that uses python as a language to process data and provides the user with most favorable results
 
-1.Download both the CSV file and the python script(Recommender.py)
+## LIBRARIES USED:
+1. PANDAS
+2. NUMPY
 
-2.Edit the Python script by making changes in the data= pd.read_csv(/Enter the path where you saved the csv file/)
+## IMPORTANT STEPS:
+1. Import the CSV file 
+2. Make changes in the python script by updating the path of the CSV file
+

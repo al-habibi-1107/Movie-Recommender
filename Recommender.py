@@ -4,6 +4,7 @@
 # In[29]:
 
 
+#importing necessary libraries
 import pandas as pd
 import numpy as np
 
@@ -19,11 +20,11 @@ data.head()
 # In[31]:
 
 
+#Taking input from the user about their liked movies
 usr_input=input('Tell us about your last watched Netflix which you loved: ')
 
 
-# In[32]:
-
+# In[44]:
 
 
 
@@ -51,7 +52,7 @@ genre
 # In[34]:
 
 
-
+#The dataframe is now sorted in terms of similar listing
 recommend= data[data['listed_in']== genre ]
 recommend.head()
 
@@ -59,6 +60,7 @@ recommend.head()
 # In[35]:
 
 
+#code to get the rating of the show given by the user
 rating= recent_movie['rating']
 str(rating)
 rating=str(rating)
@@ -76,6 +78,7 @@ rating
 # In[39]:
 
 
+#The dataframe is further classified on basis of similar rating
 recommend= recommend[recommend['rating']== rating ]
 recommend.head()
 
@@ -83,6 +86,7 @@ recommend.head()
 # In[37]:
 
 
+#code to get the type attribute of the movie read from the user
 mv_type=recent_movie['type']
 mv_type=str(mv_type)
 i=0
@@ -99,6 +103,7 @@ mv_type
 # In[40]:
 
 
+#the dataframe is now also considerate on the type attribute of the similar results
 recommend= recommend[recommend['type']== mv_type ]
 recommend.head()
 
@@ -106,6 +111,7 @@ recommend.head()
 # In[41]:
 
 
+#the final results are displayed
 print('The movies you should watch based on the last watched are:')
 recommend.head()
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[29]:
+# In[22]:
 
 
 #importing necessary libraries
@@ -9,7 +9,7 @@ import pandas as pd
 import numpy as np
 
 
-# In[30]:
+# In[23]:
 
 
 #enter the path where you stored the netflix_titles.csv file
@@ -17,22 +17,21 @@ data= pd.read_csv("/Users/kamilanwar/Documents/Movie Recommender/netflix_titles.
 data.head()
 
 
-# In[31]:
+# In[24]:
 
 
 #Taking input from the user about their liked movies
 usr_input=input('Tell us about your last watched Netflix which you loved: ')
 
 
-# In[44]:
-
+# In[25]:
 
 
 recent_movie=data[data['title']== usr_input]
 recent_movie
 
 
-# In[33]:
+# In[26]:
 
 
 #Converts the Genre of the movie to a string so that it can be compared later
@@ -49,7 +48,7 @@ genre=genre[0:i]
 genre
 
 
-# In[34]:
+# In[27]:
 
 
 #The dataframe is now sorted in terms of similar listing
@@ -57,7 +56,7 @@ recommend= data[data['listed_in']== genre ]
 recommend.head()
 
 
-# In[35]:
+# In[28]:
 
 
 #code to get the rating of the show given by the user
@@ -75,7 +74,7 @@ rating=rating[0:i]
 rating
 
 
-# In[39]:
+# In[29]:
 
 
 #The dataframe is further classified on basis of similar rating
@@ -83,7 +82,7 @@ recommend= recommend[recommend['rating']== rating ]
 recommend.head()
 
 
-# In[37]:
+# In[30]:
 
 
 #code to get the type attribute of the movie read from the user
@@ -100,7 +99,7 @@ mv_type=mv_type[0:i]
 mv_type
 
 
-# In[40]:
+# In[31]:
 
 
 #the dataframe is now also considerate on the type attribute of the similar results
@@ -108,7 +107,7 @@ recommend= recommend[recommend['type']== mv_type ]
 recommend.head()
 
 
-# In[41]:
+# In[32]:
 
 
 #the final results are displayed
@@ -116,14 +115,8 @@ print('The movies you should watch based on the last watched are:')
 recommend.head()
 
 
-# In[ ]:
+# In[33]:
 
 
-
-
-
-# In[ ]:
-
-
-
+recommend=recommend.iloc[5:,]
 

@@ -9,4 +9,6 @@ This is a Basic Movie Recommendation system that uses python as a language to pr
 ## IMPORTANT STEPS:
 1. Import the CSV file 
 2. Make changes in the python script by updating the path of the CSV file
+
+The .ipynb file is in a Jupyter Notebook format, change in the path of csv is still necessary. 
  
